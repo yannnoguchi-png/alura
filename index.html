@@ -1,22 +1,67 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <title>Blog</title>
-  <style>
-    header{backgoround-color: #183c63;
-           color:
+ <style>  
+header{
+background-color:  rgb(0,101,169);
+ color:  rgb(250,250,250);
+ text-align: center;
+ max-width: 800px;
+ margin: 0 auto;
+ padding: 16px;
+ border: 5px solid rgb(134,0,55);
+}
+main{
+ display: flex;
+background-color:  rgb(250,250,250);
+ color:  rgb(0,101,169);
+ max-width: 800px;
+ margin: 0 auto;
+ padding: 16px;
+}
+  img {
+  margin-top: 20px;
+  width: 200px;
+   height: 200px;
+  }
+.artigo-autor {
+font-weight: bold;
+}
+ </style>
+ 
 </head>
 <body>
   <header>  
-<h1>minha pagina sobre pokemon</h1>
-<p1>Aqui vou compartilhar uma pequena curiosidade sobre pokemon</p1>
+<h1>Minha página sobre uma curiosidade sobre William Blake</h1>
+<p1>Aqui vou compartilhar uma pequena curiosidade sobre um dos poemas de William Blake.</p1>
 </header>
-  <main>  
+  <main>
+<img src="images (3).jpeg"
+ alt="poeta, escritor e artista, William Blake">
+<div>
 <h2>Meu primeiro post</h2>
-  <p> Por: yann</p>
-<p>Bem vindos aqui vou compartilhar curiosidades sobre pokemons e muitas outras coisas desse mundo pokemico.</p>
+  <p class="artigo-autor"> Por: Arthur De Souza</p>
+<p>Bem vindos aqui vou compartilhar poemas, curiosidades sobre poetas e muitas outras coisas desse mundo de poesia.</p>
+ <button>👽 <span>0</span></button>
+ <button>👍 <span>0</span></button>
+</div>
   </main>
 </body>
+ <script>
+const botoes = document.querySelectorAll("button");
+
+  botoes.forEach( function(botao){
+botao.addEventListener("click", botaoClicado);
+  function botaoClicado(){
+console.log("fui clicado");
+   let texto = botao.querySelector("span");
+   texto.textContent++;
+  }  
+  })
+ 
+ </script>
 </html>
